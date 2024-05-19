@@ -15,12 +15,12 @@ const Navbar = () => {
     <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
       <img src={Logo} alt="" className="logo" />
       <ul>
-        <li><Link to="hero" smooth={true} offset={0} duration={500}></Link> Home</li>
-        <li><Link to="programs" smooth={true} offset={-260}></Link> Program</li>
-        <li><Link to="about" smooth={true} offset={-150} duration={500} ></Link> About Us</li>
-        <li><Link to="campus" smooth={true} offset={-260} duration={500} ></Link> Campus</li>
-        <li><Link to="testimonials" smooth={true} offset={-260} duration={500} ></Link> Testimonials</li>
-        <li><Link to="contact" smooth={true} offset={-260} duration={500} ></Link> <button className="btn">Contact Us</button></li>
+        <li><Link to="hero" smooth={true} spy={true} activeClass="active" offset={0} duration={500}>Home</Link></li>
+        <li><Link to="programs" smooth={true} spy={true} offset={-260} activeClass="active" duration={500}>Programs</Link></li>
+        <li><Link to="about" smooth={true} spy={true} offset={-130} activeClass="active" duration={500} >About Us</Link></li>
+        <li><Link to="campus" smooth={true} spy={true} offset={-260} activeClass="active" duration={500} >Campus</Link></li>
+        <li><Link to="testimonials" smooth={true} spy={true} offset={-260} activeClass="active" duration={500} >Testimonials</Link></li>
+        <li><Link to="contact" className="btn" smooth={true} spy={true} offset={-260} activeClass="active" duration={500}>Contact Us</Link></li>
       </ul>
     </nav>
   )
